@@ -1,0 +1,39 @@
+From: =?utf-8?q?Bastien_Roucari=C3=A8s?= <rouca@debian.org>
+Date: Sun, 3 Oct 2021 20:39:52 +0000
+Subject: Fix test
+
+Debian use an incompatible tape. Fix tape
+
+Forwarded: not-needed
+---
+ test/objects.js | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+diff --git a/test/objects.js b/test/objects.js
+index ad921ed..e42863d 100644
+--- a/test/objects.js
++++ b/test/objects.js
+@@ -7,11 +7,11 @@ test('writing objects', function (t) {
+     t.equal(objs.length, 2)
+     t.deepEqual(objs[0], {"foo": "bar"})
+     t.deepEqual(objs[1], {"baz": "taco"})
++    t.end()
+   }
+   stream.write({"foo": "bar"})
+   stream.write({"baz": "taco"})
+   stream.end()
+-  t.end()
+ })
+ 
+ 
+@@ -21,9 +21,9 @@ test('switch to objects encoding if no encoding specified and objects are writte
+     t.equal(objs.length, 2)
+     t.deepEqual(objs[0], {"foo": "bar"})
+     t.deepEqual(objs[1], {"baz": "taco"})
++    t.end()
+   }
+   stream.write({"foo": "bar"})
+   stream.write({"baz": "taco"})
+   stream.end()
+-  t.end()
+ })

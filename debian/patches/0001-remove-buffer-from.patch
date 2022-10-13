@@ -1,0 +1,93 @@
+From: =?utf-8?q?Bastien_Roucari=C3=A8s?= <rouca@debian.org>
+Date: Sun, 3 Oct 2021 20:24:53 +0000
+Subject: remove buffer-from package
+
+Forwarded: no
+Reviewed-By: Xavier Guimard <yadd@debian.org>
+Last-Update: 2020-05-13
+
+Could use Buffer.from
+---
+ index.js           | 2 +-
+ package.json       | 1 -
+ test/buffer.js     | 2 +-
+ test/infer.js      | 2 +-
+ test/string.js     | 2 +-
+ test/typedarray.js | 2 +-
+ 6 files changed, 5 insertions(+), 6 deletions(-)
+
+diff --git a/index.js b/index.js
+index dd672a7..c692047 100644
+--- a/index.js
++++ b/index.js
+@@ -1,6 +1,6 @@
+ var Writable = require('readable-stream').Writable
+ var inherits = require('inherits')
+-var bufferFrom = require('buffer-from')
++var bufferFrom = Buffer.from
+ 
+ if (typeof Uint8Array === 'undefined') {
+   var U8 = require('typedarray').Uint8Array
+diff --git a/package.json b/package.json
+index 3797828..cd5dd7f 100644
+--- a/package.json
++++ b/package.json
+@@ -28,7 +28,6 @@
+   },
+   "license": "MIT",
+   "dependencies": {
+-    "buffer-from": "^1.0.0",
+     "inherits": "^2.0.3",
+     "readable-stream": "^3.0.2",
+     "typedarray": "^0.0.6"
+diff --git a/test/buffer.js b/test/buffer.js
+index 2aec997..21555d3 100644
+--- a/test/buffer.js
++++ b/test/buffer.js
+@@ -2,7 +2,7 @@ var concat = require('../')
+ var test = require('tape')
+ var TA = require('typedarray')
+ var U8 = typeof Uint8Array !== 'undefined' ? Uint8Array : TA.Uint8Array
+-var bufferFrom = require('buffer-from')
++var bufferFrom = Buffer.from
+ 
+ test('buffer stream', function (t) {
+   t.plan(2)
+diff --git a/test/infer.js b/test/infer.js
+index 4b9edfa..a9b6495 100644
+--- a/test/infer.js
++++ b/test/infer.js
+@@ -1,6 +1,6 @@
+ var concat = require('../')
+ var test = require('tape')
+-var bufferFrom = require('buffer-from')
++var bufferFrom = Buffer.from
+ 
+ test('type inference works as expected', function(t) {
+   var stream = concat()
+diff --git a/test/string.js b/test/string.js
+index d44f75d..e1270ee 100644
+--- a/test/string.js
++++ b/test/string.js
+@@ -2,7 +2,7 @@ var concat = require('../')
+ var test = require('tape')
+ var TA = require('typedarray')
+ var U8 = typeof Uint8Array !== 'undefined' ? Uint8Array : TA.Uint8Array
+-var bufferFrom = require('buffer-from')
++var bufferFrom = Buffer.from
+ 
+ test('string -> buffer stream', function (t) {
+   t.plan(2)
+diff --git a/test/typedarray.js b/test/typedarray.js
+index 83bf401..59d5449 100644
+--- a/test/typedarray.js
++++ b/test/typedarray.js
+@@ -2,7 +2,7 @@ var concat = require('../')
+ var test = require('tape')
+ var TA = require('typedarray')
+ var U8 = typeof Uint8Array !== 'undefined' ? Uint8Array : TA.Uint8Array
+-var bufferFrom = require('buffer-from')
++var bufferFrom = Buffer.from
+ 
+ test('typed array stream', function (t) {
+   t.plan(2)

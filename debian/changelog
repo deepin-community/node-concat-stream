@@ -1,0 +1,71 @@
+node-concat-stream (2.0.0-2) unstable; urgency=medium
+
+  * Team upload
+  * MA: foreign
+  * Fix test
+
+ -- Bastien Roucariès <rouca@debian.org>  Sun, 03 Oct 2021 20:48:31 +0000
+
+node-concat-stream (2.0.0-1) unstable; urgency=medium
+
+  * Team upload
+
+  [ Debian Janitor ]
+  * Bump debhelper from old 11 to 12.
+  * Set debhelper-compat version in Build-Depends.
+  * Remove obsolete field Name from debian/upstream/metadata (already
+    present in machine-readable debian/copyright).
+
+  [ Xavier Guimard ]
+  * Declare compliance with policy 4.5.0
+  * Add "Rules-Requires-Root: no"
+  * Use pkg-js-toos auto test & install
+  * New upstream version 2.0.0
+  * Add dependency to node-readable-stream and remove patch
+  * Refresh patch
+
+ -- Xavier Guimard <yadd@debian.org>  Wed, 13 May 2020 10:27:15 +0200
+
+node-concat-stream (1.6.2-1) unstable; urgency=medium
+
+  * Team upload
+  * New upstream version
+  * Bump compat and policy (no changes)
+  * Move to salsa
+
+ -- Bastien Roucariès <rouca@debian.org>  Tue, 08 May 2018 00:05:19 +0200
+
+node-concat-stream (1.6.0-1) unstable; urgency=medium
+
+  * Move 1.6.0 from experimental to unstable
+  * Merge stretch changelog entry from last upload during freeze
+  * Bump standards version, switched copyright format URL to https
+
+ -- Ross Gammon <rosco2@ubuntu.com>  Mon, 10 Jul 2017 17:53:35 +0200
+
+node-concat-stream (1.5.1-2) unstable; urgency=high
+
+  * Apply upstream fix for Uninitialized Memory Exposure weakness CWE-201
+    (Closes: #863481)
+  * Use stretch git branch
+  * Use Ubuntu email address
+
+ -- Ross Gammon <rosco2@ubuntu.com>  Sun, 28 May 2017 16:19:49 +0200
+
+node-concat-stream (1.6.0-1~exp1) experimental; urgency=medium
+
+  * New upstream release
+  * Update dependency versions
+  * Hint javascript section instead of web, to avoid override
+  * Use Ubuntu email address
+  * Bump standards version, no changes required
+  * Use secure Vcs URI
+  * Enable testsuite, node-tape now available
+
+ -- Ross Gammon <rosco2@ubuntu.com>  Sat, 20 May 2017 16:01:16 +0200
+
+node-concat-stream (1.5.1-1) unstable; urgency=low
+
+  * Initial release (Closes: #796351)
+
+ -- Ross Gammon <rossgammon@mail.dk>  Sun, 08 Nov 2015 16:53:39 +0100
