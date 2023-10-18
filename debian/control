@@ -4,13 +4,12 @@ Priority: optional
 Maintainer: Debian Javascript Maintainers <pkg-javascript-devel@lists.alioth.debian.org>
 Uploaders: Ross Gammon <rosco2@ubuntu.com>
 Build-Depends: debhelper-compat (= 13)
+ , dh-sequence-nodejs
  , node-inherits <!nocheck>
  , node-readable-stream <!nocheck>
- , node-tap (>= 10) <!nocheck>
- , node-tape (>= 4.6.2) <!nocheck>
+ , node-tape <!nocheck>
  , node-typedarray <!nocheck>
- , dh-sequence-nodejs
-Standards-Version: 4.6.0
+Standards-Version: 4.6.1
 Vcs-Browser: https://salsa.debian.org/js-team/node-concat-stream
 Vcs-Git: https://salsa.debian.org/js-team/node-concat-stream.git
 Homepage: https://github.com/maxogden/concat-stream
@@ -23,6 +22,7 @@ Depends: ${misc:Depends}
  , node-inherits
  , node-readable-stream
  , node-typedarray
+Provides: ${nodejs:Provides}
 Multi-Arch: foreign
 Description: writable stream that concatenates strings
  Node-concat-stream creates a writable stream that concatenates strings

@@ -1,3 +1,25 @@
+node-concat-stream (2.0.0+~2.0.0-2) unstable; urgency=medium
+
+  [ Debian Janitor ]
+  * Remove constraints unnecessary since buster (oldstable)
+
+ -- Jelmer Vernooĳ <jelmer@debian.org>  Mon, 21 Nov 2022 08:32:43 +0000
+
+node-concat-stream (2.0.0+~2.0.0-1) unstable; urgency=medium
+
+  * Team upload
+  * Declare compliance with policy 4.6.1
+  * Embed typescript declarations and repack
+
+ -- Yadd <yadd@debian.org>  Sun, 05 Jun 2022 17:56:35 +0200
+
+node-concat-stream (2.0.0-3) unstable; urgency=medium
+
+  * Team upload
+  * Replace tap+tape by tape in test (Closes: #1009505)
+
+ -- Yadd <yadd@debian.org>  Sun, 17 Apr 2022 07:33:17 +0200
+
 node-concat-stream (2.0.0-2) unstable; urgency=medium
 
   * Team upload
