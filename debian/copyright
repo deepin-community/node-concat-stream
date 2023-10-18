@@ -2,6 +2,7 @@ Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
 Upstream-Name: concat-stream
 Upstream-Contact: http://github.com/maxogden/concat-stream/issues
 Source: https://github.com/maxogden/concat-stream#readme
+ https://registry.npmjs.org/@types/concat-stream
 
 Files: *
 Copyright: 2015 Max Ogden <max@maxogden.com>
@@ -9,6 +10,10 @@ License: Expat
 
 Files: debian/*
 Copyright: 2015 Ross Gammon <rossgammon@mail.dk>
+License: Expat
+
+Files: types-*/*
+Copyright: Microsoft Corporation
 License: Expat
 
 License: Expat
